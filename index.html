@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 54px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOUT</title>
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      charset="UTF-8"
+      type="text/javascript"
+      src="./5c782c29-a134-4546-8037-cd8e6c2be5fd.js"
+    ></script>
+  </head>
+  <body>
+    <main id="app">
+      <div class="content">
+        <!-- topbar -->
+        <div data-v-49c2c363="" data-v-2dbf4bdb="" style="width: 100%">
+          <div data-v-49c2c363="" class="top_box">
+            <div data-v-49c2c363="" class="top_tab">
+              <div data-v-49c2c363="" class="logo_box">
+                <img
+                  data-v-49c2c363=""
+                  src="./assets/images/logo.6bf4c480.png"
+                  alt=""
+                  class="top_logo"
+                />
+                <img
+                  data-v-49c2c363=""
+                  src="data:image/png;base64,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"
+                  style="opacity: 0; width: 0px; height: 0px"
+                />
+                <div data-v-49c2c363="" class="top_lab">GOUTCOIN</div>
+              </div>
+              <div data-v-49c2c363="" class="top_flex">
+                <div data-v-49c2c363="" class="top_link">
+                  <div data-v-49c2c363="" class="title_div">
+                    <button data-v-49c2c363="" class="check_link top_title">
+                      Home
+                    </button>
+                  </div>
+                  <div data-v-49c2c363="" class="title_div">
+                    <button data-v-49c2c363="" class="top_title">
+                      Economics
+                    </button>
+                  </div>
+                  <div data-v-49c2c363="" class="title_div">
+                    <button data-v-49c2c363="" class="top_title">
+                      Staking
+                    </button>
+                  </div>
+                  <div data-v-49c2c363="" class="title_div">
+                    <button data-v-49c2c363="" class="top_title">
+                      Community
+                    </button>
+                  </div>
+                  <div data-v-49c2c363="" class="title_div">
+                    <button data-v-49c2c363="" class="top_title">About</button>
+                  </div>
+                  <div data-v-49c2c363="" class="title_div">
+                    <button
+                      data-v-49c2c363=""
+                      class="top_title interact-button"
+                    >
+                      BUY GOUT
+                    </button>
+                  </div>
+                  <div data-v-49c2c363="" class="twter">
+                    <img
+                      data-v-49c2c363=""
+                      src="data:image/png;base64,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"
+                      alt=""
+                    /><img
+                      data-v-49c2c363=""
+                      src="data:image/png;base64,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"
+                      alt=""
+                    />
+                  </div>
+                  <div data-v-49c2c363="" class="line"></div>
+                  <div data-v-49c2c363="" class="langa">
+                    <img
+                      data-v-49c2c363=""
+                      src="data:image/png;base64,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"
+                      class="lang_a"
+                    /><img
+                      data-v-49c2c363=""
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtk9ENwjAQQ+21mAQxA1SMAi1fTMA+DGQU1I+otPGlKH/JX5Sz38l3IRofNvZHB9iEe0T1EUl6A3iSnKw6K5B0BnAiech1PzOQdAFwB3AlOUYgkgYANwADyUcRkB4zgYW42s0tcsJoI8U1LUEiDaQm7D9YM4qahwDLKOYBpoHa+YQBC0i6hsyrADPk+BWRr8j6VgOipvYf7DHa0tgt+hfWATbB5hF9AMo1ShnutOJOAAAAAElFTkSuQmCC"
+                      alt=""
+                    /><!---->
+                  </div>
+                </div>
+              </div>
+              <div data-v-49c2c363="" class="top_directory">
+                <div data-v-49c2c363="" class="langa">
+                  <img
+                    data-v-49c2c363=""
+                    src="data:image/png;base64,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"
+                    class="lang_a"
+                  /><img
+                    data-v-49c2c363=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtk9ENwjAQQ+21mAQxA1SMAi1fTMA+DGQU1I+otPGlKH/JX5Sz38l3IRofNvZHB9iEe0T1EUl6A3iSnKw6K5B0BnAiech1PzOQdAFwB3AlOUYgkgYANwADyUcRkB4zgYW42s0tcsJoI8U1LUEiDaQm7D9YM4qahwDLKOYBpoHa+YQBC0i6hsyrADPk+BWRr8j6VgOipvYf7DHa0tgt+hfWATbB5hF9AMo1ShnutOJOAAAAAElFTkSuQmCC"
+                    alt=""
+                  /><!---->
+                </div>
+                <img
+                  id="navBtn"
+                  data-v-49c2c363=""
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAABA0lEQVR4Ae3YwQkCMRCF4cQaPCpsAVqERw+2sSVYhCVYg3ePFqEFCO7RHuKLsDCEOXlz8g8MJm4Q32c8JClRCCCAAAIIIIAAAggggAAC/QnkNnIpZa/3zupV++zP55O+/5hzvtocHsBLC6KFnzNPAljPk/q6sJMexx7AKIi6XaLV9y8QLRR5EEAAAQQQQAABBBBA4DcB7zg86KNO6p16qY5Qb4W4qY86Dj9tIA/grgUbuyjQ+CGArc3jHYft8/BjD+Cg1Bd13TZRqmapmWo2CgEEEEAAAQQQQAABBBBI3nF4kAv3AUE3B/cB7Q/LfUArwhwBBBBAAAEEEEAAAQQQQKADgQ+0pi077kq0gwAAAABJRU5ErkJggg=="
+                  alt=""
+                  class="directory_bg"
+                />
+              </div>
+            </div>
+            <div
+              data-v-49c2c363=""
+              class="top_opcity"
+              style="height: 0rem"
+              id="mobileNav"
+            >
+              <div data-v-49c2c363="" style="padding-top: 20px">
+                <div data-v-49c2c363="" class="hidden_link">
+                  <div data-v-49c2c363="" class="hidden_item">Home</div>
+                </div>
+                <div data-v-49c2c363="" class="hidden_link">
+                  <div data-v-49c2c363="" class="hidden_item">Economics</div>
+                </div>
+                <div data-v-49c2c363="" class="hidden_link">
+                  <div data-v-49c2c363="" class="hidden_item">Staking</div>
+                </div>
+                <div data-v-49c2c363="" class="hidden_link">
+                  <div data-v-49c2c363="" class="hidden_item">Community</div>
+                </div>
+                <div data-v-49c2c363="" class="hidden_link">
+                  <div data-v-49c2c363="" class="hidden_item">About</div>
+                </div>
+                <div data-v-49c2c363="" class="hidden_link">
+                  <div data-v-49c2c363="" class="dropDown_btn interact-button">
+                    BUY GOUT
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-v-49c2c363="" class="time_margin"></div>
+        </div>
+
+        <!-- hero section -->
+        <div data-v-2dbf4bdb="" class="electrocardiogram">
+          <video
+            data-v-2dbf4bdb=""
+            id="bgVid"
+            playsinline=""
+            autoplay="autoplay"
+            muted="muted"
+            loop="loop"
+            class="fullscreenVideo"
+          >
+            <source
+              data-v-2dbf4bdb=""
+              src="./assets/images/electrocardiogram.05ba1e2a.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div data-v-2dbf4bdb="" class="radio_text">
+            <div data-v-2dbf4bdb="" class="rad_le">
+              <div data-v-2dbf4bdb="" class="tx_tit1">GOUT COIN</div>
+              <div data-v-2dbf4bdb="" class="tx_tit2">
+                Join the world's most promising MEME community and explore a new
+                world where fun and wealth are intertwined!
+              </div>
+              <div data-v-2dbf4bdb="" class="tx_titBox">
+                <div data-v-2dbf4bdb="">MEME Fun</div>
+                <div data-v-2dbf4bdb="">Community Power</div>
+                <div data-v-2dbf4bdb="">Staking Rewards</div>
+              </div>
+              <div data-v-2dbf4bdb="" class="tx_btn">
+                <div data-v-2dbf4bdb="" class="bt1 interact-button">
+                  Buy $GOUT
+                </div>
+                <div data-v-2dbf4bdb="" class="bt2 interact-button">
+                  Start Staking
+                </div>
+              </div>
+              <div data-v-2dbf4bdb="" class="tx_fx">
+                <img
+                  data-v-2dbf4bdb=""
+                  src="data:image/png;base64,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"
+                  alt=""
+                /><img
+                  data-v-2dbf4bdb=""
+                  src="data:image/png;base64,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"
+                  alt=""
+                />
+              </div>
+            </div>
+            <img
+              data-v-2dbf4bdb=""
+              src="./assets/images/radio_img.252d8bb4.png"
+              alt=""
+              class="rad_rig"
+            />
+          </div>
+        </div>
+
+        <!-- divide line -->
+        <div data-v-2dbf4bdb="" class="line"></div>
+
+        <!-- Honoring Winners -->
+        <div data-v-2dbf4bdb="" class="flex_box">
+          <div data-v-2dbf4bdb="" class="theme">
+            <div data-v-2dbf4bdb="" class="theme_top">
+              GOUT: Honoring Winners, Celebrating Comebacks
+            </div>
+            <div data-v-2dbf4bdb="" class="theme_explain">
+              In a wave of iconic moments, $GOUT Coin was born. From Trump's
+              victory in the 2024 U.S. election to Bitcoin reaching new highs,
+              $GOUT celebrates those who rise against the odds, turning
+              adversity into triumph.
+            </div>
+            <img
+              data-v-2dbf4bdb=""
+              src="./assets/images/gou.cb7409f3.png"
+              alt=""
+              class="gou"
+            />
+            <div data-v-2dbf4bdb="" class="theme_item">
+              <div data-v-2dbf4bdb="" class="itm">600+Group</div>
+              <div data-v-2dbf4bdb="" class="check_itm">30+Country</div>
+              <div data-v-2dbf4bdb="" class="itm">Billion exposures</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- divide line -->
+        <div data-v-2dbf4bdb="" class="line"></div>
+
+        <!-- One Token -->
+        <div data-v-2dbf4bdb="" class="flex_box">
+          <div data-v-2dbf4bdb="" class="channel">
+            <div data-v-2dbf4bdb="" class="channel_left">
+              <div data-v-2dbf4bdb="" class="channel_tit">
+                One Token, One Spirit , $GOUT Economic Model
+              </div>
+              <div data-v-2dbf4bdb="" class="channel_incl">
+                $GOUT Coin is more than a meme; it’s a symbol for those who
+                challenge adversity and seek victory. As Elon Musk said, “If you
+                play, you play to win.” We believe anyone can be a winner.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time Model -->
+        <div data-v-2dbf4bdb="" class="flex_box">
+          <div data-v-2dbf4bdb="" class="timeModel">
+            <div data-v-2dbf4bdb="" class="timeModel_box">
+              <img
+                data-v-2dbf4bdb=""
+                src="./assets/images/modul.af465f1f.png"
+                alt=""
+                class="timeModel_bg"
+              />
+              <div data-v-2dbf4bdb="" class="timeModel_div">
+                <div data-v-2dbf4bdb="" class="itm">
+                  <span data-v-2dbf4bdb=""></span>Project Name: GOUT COIN
+                </div>
+                <div data-v-2dbf4bdb="" class="itm">
+                  <span data-v-2dbf4bdb=""></span>Token Symbol: GOUT
+                </div>
+                <div data-v-2dbf4bdb="" class="itm">
+                  <span data-v-2dbf4bdb=""></span>Deployed on: BSC
+                </div>
+                <div data-v-2dbf4bdb="" class="line"></div>
+                <div data-v-2dbf4bdb="" class="itm2">
+                  <span data-v-2dbf4bdb=""></span>Token Supply: 210 Billion
+                </div>
+                <div data-v-2dbf4bdb="" class="itm2">
+                  <span data-v-2dbf4bdb=""></span>Private Sale: 115 Billion
+                </div>
+                <div data-v-2dbf4bdb="" class="itm2">
+                  <span data-v-2dbf4bdb=""></span>BNB Pool: 30 Billion
+                </div>
+                <div data-v-2dbf4bdb="" class="itm2">
+                  <span data-v-2dbf4bdb=""></span>USDT Pool: 30 Billion
+                </div>
+                <div data-v-2dbf4bdb="" class="itm2">
+                  <span data-v-2dbf4bdb=""></span>Burn (Black Hole): 35 Billion
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LP Stake -->
+        <div data-v-2dbf4bdb="" class="flex_box">
+          <div data-v-2dbf4bdb="" class="radio_box">
+            <div data-v-2dbf4bdb="" class="radio_tit">
+              LP Stake, High APR, low risk.
+            </div>
+            <div data-v-2dbf4bdb="" class="radio_lab">
+              GOUTCOIN Yield Farming in Farms is a great way to earn BNB on
+              PancakeSwap.
+            </div>
+            <div data-v-2dbf4bdb="" class="radio_text2">
+              <div data-v-2dbf4bdb="" class="radio_left">
+                <div data-v-2dbf4bdb="" class="left_tit1">
+                  Just stake some tokens to earn. High APR, low risk.
+                </div>
+                <div
+                  data-v-2dbf4bdb=""
+                  class="left_incl"
+                  style="-moz-box-orient: vertical"
+                >
+                  Farms require you to stake two tokens to provide liquidity and
+                  receive either a liquidity position NFT or LP Tokens, which
+                  you then stake in the Farm to earn rewards.
+                </div>
+                <div
+                  data-v-2dbf4bdb=""
+                  class="left_incl2"
+                  style="-moz-box-orient: vertical"
+                >
+                  This lets you earn GOUT while still keeping a position in your
+                  other tokens! People can earn GOUT by providing value to
+                  others through social interaction, working, investing, etc.
+                  Redefine GOUT as money and GOUT as life. Come and participate
+                  in private placement ! ! !
+                </div>
+              </div>
+              <div data-v-2dbf4bdb="" class="radio_right2">
+                <img
+                  data-v-2dbf4bdb=""
+                  src="./assets/images/contribute1.954d84fa.png"
+                  class="radio_right"
+                />
+                <div data-v-2dbf4bdb="" class="left_btn">
+                  Participate in Staking
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Celebration -->
+        <div data-v-2dbf4bdb="" class="comm_lab">
+          GOUT: A Celebration of Victory, A Tribute to Comebacks
+        </div>
+
+        <!-- $GOUT Coin represents -->
+        <div data-v-2dbf4bdb="" class="comm_span">
+          $GOUT Coin represents more than just a meme token—it symbolizes
+          victory from struggle. Built with the spirit of overcoming, $GOUT
+          unites those daring to dream, creating a decentralized community for
+          winners.
+        </div>
+
+        <!-- Join the GOUT -->
+        <div data-v-2dbf4bdb="" class="flex_box" style="width: 100%">
+          <div data-v-2dbf4bdb="" class="community">
+            <div data-v-2dbf4bdb="" class="comm_tit">
+              Join the GOUT COIN community!
+            </div>
+            <div data-v-2dbf4bdb="" class="comm_tit2">
+              Join the world's most promising MEME community and explore a new
+              world of fun and wealth intertwined
+            </div>
+            <div data-v-2dbf4bdb="" class="comm_btn">
+              <img
+                data-v-2dbf4bdb=""
+                src="./assets/images/comm1.2bc1e299.png"
+                alt=""
+              /><img
+                data-v-2dbf4bdb=""
+                src="./assets/images/comm2.34385b31.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision -->
+        <div data-v-2dbf4bdb="" class="flex_box">
+          <div data-v-2dbf4bdb="" class="airdrop">
+            <div data-v-2dbf4bdb="" class="airdrop_tit">
+              Vision &amp; Mission
+            </div>
+            <div data-v-2dbf4bdb="" class="airdrop_incl">
+              Create a global MEME ecosystem where fun and wealth flow freely
+              among users.
+            </div>
+            <div data-v-2dbf4bdb="" class="airdrop_img">
+              <video
+                data-v-2dbf4bdb=""
+                playsinline=""
+                autoplay="autoplay"
+                muted="muted"
+                loop="loop"
+                class="airdrop_img_1"
+              >
+                <source
+                  data-v-2dbf4bdb=""
+                  src="./assets/images/introduce.97e86f23.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!--  where to Buy -->
+        <div data-v-2dbf4bdb="" class="flex_box">
+          <div data-v-2dbf4bdb="" class="timeModel1">
+            <div data-v-2dbf4bdb="" class="contribute_item2">
+              <div data-v-2dbf4bdb="" class="contribute_right1">
+                <div data-v-2dbf4bdb="" class="rig_lab1">
+                  where to Buy <span data-v-2dbf4bdb=""> $GOUT</span>
+                </div>
+                <div data-v-2dbf4bdb="" class="rig_lab2">
+                  We understand buying crypto isn't easy at first. Don't
+                  worry,GOUT is happy to help ® 24/7 GOUT Support
+                </div>
+                <img
+                  data-v-2dbf4bdb=""
+                  src="./assets/images/con1.2e5ec20b.png"
+                  alt=""
+                  class="con1"
+                />
+                <div data-v-2dbf4bdb="">
+                  <img
+                    data-v-2dbf4bdb=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAATCAYAAADPsWC5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAORSURBVHgB7ZjdUdtAEMfPxjzHqcCmgpgKMBXEqQCowOaZAdswPGMqiFwBpALkClAqQKkg4pkB8vuLPUYICVAUCJnJzqxX97G3e3u7e3t27j+4RlHnZDJpN5vNwe3tbdf38R1BIsbi/PzpdHoOaTNnlfHE/WPQyjbYQLfRaHwF+2pD78f8N3Nm4HaWj7GPkA5GcO8Z9vf3T25ububof5rtb/oPGYDTPzcDLMAtGFaE9K3T1sZj5ozkKUVC3rMXHB4e9iAD9H+ke+oJZoAzd+fS0/F4PMnNi8EQnB0cHPSf26wPJ62HEcVbGEY5HunQt2bKlz+x3PyB0VOjffi78CV5PulzfX091Df760iWlwMmqY8T02NOe8JnsLe3t+UqAm4WQzrwNjDgaGlpaWwC7gHlHoWRKfggBLOAwjG4XWQM5SF4eqz7EXqS5YcnRI91m3dWtHYGFmk4MGnTFD12NUDGxABHKHGsEOJ7lW4ZNQ0jxid5HnmMNgPPXHPFJ1QbKu840SmXyWTODNL2fJKlTXseebbWlWGybY/ibylWcJWurA5j5GoAC44w5GpunTQUFG6MDy2x3ocT8wNIUBBioTxARoBPnhWWiF3TrbS7u5vyY2gZb6zQUJs1Quvvi9IfMvfBWs2rq6u2beCHqw/TIkOaIlpfsrq5saQsx1gYJPKU/JjdSOnJZvnpjyUL44buhdDyFgMuXE0gJ8zKxlD2AgU7hEjbVYNLsPPEeJTTIYAErgK03DsATrJneWnNunT6Mae5eAF77GpCi5OJyAk6qZ77C0CsbrDhwJoL5Sba8pYVvHTzOf4KtUmpN7XICUpaiqWu7tO3LHjsegz0rcyeT1gCu34/uFeEpjZt14eumZF7W/DeFxQZIAOvejC+TpgbHWaqqVcHn5Q5hMuicSvP5QVVk2k1PfSjjJrxhrMyQ6gA+ZNGIvH5zL5WICvVxd0ZoLYRWCs1NPmv+O0gwAhfIGn5CV6QsEJ395BypsQnjTHvG9+D3DpPXWGloPoBOZHqAKiuUFWsCk/dFhsmK32hupqgvwJY8zN4RJ5RcSgPU7U6z74iE6u3VU5+N2OMDYdWsCxw4aJaQDV+/JQS/iQKlJPxF0rM0CNQ74gNqB5ym3z/LOFTXZOUvWgL5kvv2MvRW0kFlx5qjTImLc71mSYuXCg2gb+doBRGy8vL7Z2dnahsHHldycq+OJ/jqwp6JrDxdlbOL74f6H8j1zJQAAAAAElFTkSuQmCC"
+                    alt=""
+                    class="con5"
+                  />
+                </div>
+                <div data-v-2dbf4bdb="" class="con_btn">
+                  <img
+                    data-v-2dbf4bdb=""
+                    src="./assets/images/con2.5e6d8b39.png"
+                    alt=""
+                    class="con2"
+                  /><img
+                    data-v-2dbf4bdb=""
+                    src="./assets/images/con3.86ab28f9.png"
+                    alt=""
+                    class="con3"
+                  /><img
+                    data-v-2dbf4bdb=""
+                    src="./assets/images/con4.b0c7d4bd.png"
+                    alt=""
+                    class="con4"
+                  />
+                </div>
+              </div>
+              <div data-v-2dbf4bdb="" class="contribute_left1">
+                <video
+                  data-v-2dbf4bdb=""
+                  playsinline=""
+                  autoplay="autoplay"
+                  muted="muted"
+                  loop="loop"
+                  class="con_img"
+                >
+                  <source
+                    data-v-2dbf4bdb=""
+                    src="./assets/images/channel.77110001.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div data-v-2dbf4bdb="" class="con_lab">
+                  About GOUT: The Perfect Blend of Fun and Value
+                </div>
+                <div data-v-2dbf4bdb="" class="con_con">
+                  Born from the meme culture, $GOUT is a token that brings not
+                  just humor, but real value to the community. From memes to
+                  skyrocketing returns, $GOUT is leading the trend.
+                </div>
+              </div>
+            </div>
+            <div data-v-2dbf4bdb="" class="contribute_btn">BUY NOW</div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer
+          data-v-b1eac6f2=""
+          data-v-2dbf4bdb=""
+          class="footer-box"
+          type="pc"
+        >
+          <div data-v-b1eac6f2="" class="foot_link">
+            <div data-v-b1eac6f2="" class="item">
+              <div data-v-b1eac6f2="" class="title">Links</div>
+              <div data-v-b1eac6f2="" class="child_title">Pledge</div>
+              <div data-v-b1eac6f2="" class="child_title">Buy GOUT COIN</div>
+            </div>
+            <div data-v-b1eac6f2="" class="item">
+              <div data-v-b1eac6f2="" class="title">Socials</div>
+              <div data-v-b1eac6f2="" class="child_title">Twitter</div>
+              <div data-v-b1eac6f2="" class="child_title">Telegram Group</div>
+              <div data-v-b1eac6f2="" class="child_title">Discord</div>
+              <div data-v-b1eac6f2="" class="child_title">Contact Us</div>
+            </div>
+            <div data-v-b1eac6f2="" class="item">
+              <div data-v-b1eac6f2="" class="title">Resources</div>
+              <div data-v-b1eac6f2="" class="child_title">Docs</div>
+              <div data-v-b1eac6f2="" class="child_title">White paper</div>
+            </div>
+            <div data-v-b1eac6f2="" class="item">
+              <div data-v-b1eac6f2="" class="title">Legals</div>
+              <div data-v-b1eac6f2="" class="child_title">
+                Terms &amp; Conditions
+              </div>
+            </div>
+          </div>
+          <div data-v-b1eac6f2="" class="line"></div>
+          <div data-v-b1eac6f2="" class="copyright">
+            <div data-v-b1eac6f2="" class="btn_left">
+              <div data-v-b1eac6f2="" class="le_box">
+                <img
+                  data-v-b1eac6f2=""
+                  src="./assets/images/logo.6bf4c480.png"
+                  alt=""
+                  class="top_logo"
+                />
+                <div data-v-b1eac6f2="">GOUT COIN</div>
+              </div>
+              <div data-v-b1eac6f2="" class="btn_div">
+                Born from the meme culture, $GOUT is a token that brings not
+                just humor, but real value to the community. From memes to
+                skyrocketing returns, $GOUT is leading the trend.
+              </div>
+              <div data-v-b1eac6f2="" class="twter">
+                <img
+                  data-v-b1eac6f2=""
+                  src="data:image/png;base64,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"
+                  alt=""
+                /><img
+                  data-v-b1eac6f2=""
+                  src="data:image/png;base64,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"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div data-v-b1eac6f2="" class="btn_right">
+              ©2023 GOUT All rights reserved
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- javascript -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>
